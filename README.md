@@ -1,6 +1,6 @@
-Ubuntu 18
+# Ubuntu 18
 
-# Install nvim
+## Install nvim
 
 Version 0.9.5
 ```
@@ -30,7 +30,7 @@ sudo modprobe fuse
 fusermount -V
 nvim --version
 ```
-# Install nodejs, tss_server
+## Install nodejs, tss_server
 
 ```
 sudo apt update
@@ -39,14 +39,14 @@ sudo apt install npm
 npm i -g typescript-language-server
 ```
 
-# Install eza
+## Install eza
 
 ```
 sudo apt update
 sudo apt install -y eza
 ```
 
-# Install zsh
+## Install zsh
 
 ```
 sudo apt update
@@ -58,7 +58,7 @@ git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/pl
 git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
 ```
 
-# Install tools
+## Install tools
 
 ```
 sudo apt-get install ripgrep
@@ -69,7 +69,7 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
 
-# Install mysql ubuntu
+## Install mysql ubuntu
 ```
 install mysql-client
 sudo apt update
@@ -79,7 +79,7 @@ sudo mysql_secure_installation
 sudo mysql
 ```
 
-# Install mysql community, navicat (in window)
+## Install mysql community, navicat (in window)
 Set environment mysql (System variables => Path => Edit => Browse Folder ): C:/ProgramFile/Mysql/MySQL Server 9.2/bin
 
 Cmd:
@@ -93,7 +93,7 @@ Check connect from wsl to window
 mysql -h 192.168.x.x -u username -p
 ```
 
-# Install chrome version 138
+## Install chrome version 138
 ```
 sudo apt remove google-chrome-stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
