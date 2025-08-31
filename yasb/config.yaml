@@ -33,8 +33,8 @@ bars:
     widgets:
       left: [
         "home",
-          # "taskbar",
           "komorebi_control",
+          "apps",
           "cpu",
           "memory",
           "traffic",
@@ -46,14 +46,30 @@ bars:
         ]
       right: [
         # "komorebi_active_layout",
-          # "weather",
+          # "systray",
           "notes",
           "volume",
           "disk",
+          "wifi",
           "power_menu",
           "clock"
       ]
 widgets:
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label: "{data}"
+      app_list:
+        - { icon: "\uf268",launch: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" }
+        - { icon: "\udb80\ude39",launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" }
+        - { icon: "\uf489", launch: "wt" }
+        - { icon: "\udb82\ude1e",launch: "C:\\Users\\lazydog\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" }
+        - { icon: "\uf2c6",launch: "C:\\Users\\lazydog\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe" }
   home:
     type: "yasb.home.HomeWidget"
     options:
@@ -110,9 +126,9 @@ widgets:
   traffic:
     type: "yasb.traffic.TrafficWidget"
     options:
-      label: "<span>\udb82\udcfa</span> \uea9a {download_speed} \ueaa1 {upload_speed}"
+      label: "\uea9a {download_speed} \ueaa1 {upload_speed}"
       label_alt: "<span>\udb82\udcfa</span> Download {download_speed} | Upload {upload_speed}"
-      update_interval: 1000
+      update_interval: 1500
       callbacks:
         on_left: 'toggle_label'
         on_right: 'exec cmd /c Taskmgr'
@@ -182,10 +198,10 @@ widgets:
       label_zero_index: false
       hide_empty_workspaces: false
       hide_if_offline: true
-      toggle_workspace_layer:
-        enabled: false
-        tiling_label: "\udb81\ude40 Tiling"
-        floating_label: "\udb80\udd37 Floating"
+      # toggle_workspace_layer:
+      #   enabled: false
+      #   tiling_label: "\udb81\ude40 Tiling"
+      #   floating_label: "\udb80\udd37 Floating"
       animation: true
   komorebi_control:
     type: "komorebi.control.KomorebiControlWidget"
@@ -333,3 +349,38 @@ widgets:
         left: 8
         bottom: 0
         right: 8
+  wifi:
+      type: "yasb.wifi.WifiWidget"
+      options:
+        label: "<span>{wifi_icon}</span>"
+        label_alt: "{wifi_name}{wifi_strength}%"
+        update_interval: 5000
+        callbacks:
+          on_left: "toggle_label"
+          on_middle: "do_nothing"
+          on_right: "exec cmd.exe /c start ms-settings:network"
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\uf137"
+      label_expanded: "\uf138"
+      label_position: "right" # Can be "left" or "right"
+      icon_size: 15 # Can be any integer between 8 and 64
+      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      #show_unpinned: false
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+      unpinned_vis_btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]

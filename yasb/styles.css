@@ -69,7 +69,6 @@
 }
 
 .active-window-widget {
-    /* border-bottom: 1px solid #bec8e7; */
     background-color: var(--blue-color);
     border-top-left-radius: 24px;
     border-bottom-right-radius: 24px;
@@ -89,35 +88,42 @@
 /* Komorebi Workspace Widget */
 .komorebi-workspaces .ws-btn {
     border: none;
-    color:transparent;
-	margin:0 3px;
+    color: transparent;
+    margin: 0 3px;
     border-radius: 8px;
-    font-size:1px;
+    font-size: 1px;
     background-color: #4f5868;
     height: 16px;
     width: 16px;
 }
+
 .komorebi-workspaces .ws-btn:hover {
     background-color: var(--blue-color)
 }
+
 .komorebi-workspaces .ws-btn.populated {
     background-color: #b4befe;
 }
+
 .komorebi-workspaces .ws-btn.active {
     width: 46px;
     max-width: 46px;
     background-color: var(--blue-color)
 }
+
 .komorebi-workspaces .float-override {
     color: #a6e3a1;
     padding-left: 6px;
 }
+
 .komorebi-workspaces .workspace-layer {
-    padding-left:6px;
+    padding-left: 6px;
 }
+
 .komorebi-workspaces .workspace-layer.tiling {
     color: #a6e3a1;
 }
+
 .komorebi-workspaces .workspace-layer.floating {
     color: #eba0ac;
 }
@@ -294,7 +300,7 @@
     margin: 0;
 }
 
-.power-menu-widget .label{
+.power-menu-widget .label {
     margin-right: 5px;
     margin-top: 1px;
     font-size: 14px;
@@ -573,19 +579,21 @@
 
 
 .komorebi-control-widget {
-    border-bottom: 1px solid #b4befe;
+    border-bottom: 1px solid #89b4fa;
     background-color: rgba(235, 160, 173, 0);
 }
 
 /* Komorebi Control Widget */
 .komorebi-control-widget .icon {
-    color: #b4befe;
+    color: #89b4fa;
     font-size: 16px;
     margin-right: 4px;
 }
+
 .komorebi-control-menu {
     background-color: var(--background-color)
 }
+
 .komorebi-control-menu .button {
     color: rgba(162, 177, 199, 0.4);
     padding: 8px 16px;
@@ -593,16 +601,42 @@
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.04);
 }
+
 .komorebi-control-menu .button.active {
     color: rgb(228, 228, 228);
     background-color: rgba(255, 255, 255, 0.04);
 }
+
 .komorebi-control-menu .button:disabled,
 .komorebi-control-menu .button.active:disabled {
     background-color: rgba(255, 255, 255, 0.01);
     color: rgba(255, 255, 255, 0.2);
 }
+
 .komorebi-control-menu .footer .text {
     font-size: 12px;
     color: #6c7086;
+}
+
+/* WIFI Setting */
+.wifi-widget .label {
+    font-size: 14px;
+    color: #a6e3a1;
+    margin-right: 4px;
+}
+
+.wifi-widget {
+    border-bottom: 1px solid #a6e3a1;
+    background-color: rgba(235, 160, 173, 0);
+}
+
+.apps-widget .label {
+    font-size: 14px;
+    color: #b4befe;
+    margin-right: 1px;
+}
+
+.apps-widget {
+    border-bottom: 1px solid #b4befe;
+    background-color: rgba(235, 160, 173, 0);
 }
